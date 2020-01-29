@@ -48,6 +48,30 @@ The above is an example of Object Oriented Programming. The keyword new initiate
 
 
 ### Example (Using the "this" method)
+```
+<?php
 
-#### Input: 
+class fruit {
+  public $name;
+  public $family;
+  
+  
+  public function fruitName($name, $family){
+    $this->name = $name;
+    $this->family = $family;
+  }
+  
+  public function text() {
+    echo "My favourite fruit is {$this->name} and the family it comes from is {$this->family}";
+  }
+}
 
+class apple extends fruit {
+  public function text() {
+      echo "I like apples";
+  }
+}
+
+?>
+```
+The above example uses the "This" keyword. It refers to the current object and can only be changed inside of the methods. 
