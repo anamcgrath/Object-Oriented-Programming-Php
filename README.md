@@ -8,27 +8,46 @@ Object Oriented Programming (OOP) is about making objects that contain both data
   OOP is made up of classes and objects, classes are the broader term or template that is made up of multiple objects, objects have the same properties that the class said they would have but the property values may be different. Classes are generic but an object has to be specific. There can be many objects for one class.
   
 ### Example
-  
+ #### Input: 
   ```
  <?php
  
   class colour {
     public primarycolour($pChoose) {
-      echo "This is a primary colour: " . $pChoose;
+      echo "This is a primary colour: " . $pChoose . "<br>";
      }
     public secondarycolour($sChoose) {
-      echo "This is a secondary colour: " . $sChoose;
+      echo "This is a secondary colour: " . $sChoose . "<br>";
     }
   }
   class shade extends colour {
      public highlight($hChoose) {
-       echo "This is a highlight: " . $hChoose;
+       echo "This is a highlight: " . $hChoose . "<br>";
       }
      public shadow($shChoose) {
-       echo "This is a shadow: " . $shChoose;
+       echo "This is a shadow: " . $shChoose . "<br>";
       }
   }
+  $colour = new colour();
+  $shade = new shade();
+  $colour->primarycolour("red");
+  $colour->secondarycolour("green");
+  $shade->highlight("bright");
+  $shade->shadow("dark");
+
 ?>
 ```
+#### Output: 
+```
+This is a primary colour: red
+This is a secondary colour: green
+This is a highlight: bright
+This is a shadow: dark
+```
+The above is an example of Object Oriented Programming. The keyword new initiates the function to run. You can access the method of the class by using the object followed by the `->` operator. 
 
-The above example 
+
+### Example (Using the "this" method)
+
+#### Input: 
+
